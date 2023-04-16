@@ -1,0 +1,535 @@
+{
+	"info": {
+		"_postman_id": "a494dc26-ff87-4d9d-bee9-3e1fccdae148",
+		"name": "bgsl-srv-saldo-extrato-entr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Conta Corrente - Extratos - Lancamentos Futuros",
+			"_postman_id": "3d249a4a-eabd-447a-b422-6a15f7daa85b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaCorrente/extratos/lancamentosFuturos?codigoPeriferico=000&agencia=02516&numeroConta=0349546&razaoConta=0&qtdOcorrencias=200&chaveRestart=",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"bgsl-srv-saldo-extrato-entr",
+						"api",
+						"v1",
+						"contaCorrente",
+						"extratos",
+						"lancamentosFuturos"
+					],
+					"query": [
+						{
+							"key": "codigoPeriferico",
+							"value": "000"
+						},
+						{
+							"key": "agencia",
+							"value": "02516"
+						},
+						{
+							"key": "numeroConta",
+							"value": "0349546"
+						},
+						{
+							"key": "razaoConta",
+							"value": "0"
+						},
+						{
+							"key": "qtdOcorrencias",
+							"value": "200"
+						},
+						{
+							"key": "chaveRestart",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conta Corrente - Extratos - Período",
+			"_postman_id": "e96f203e-2745-4ba6-9b02-207eef3d6b1f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaCorrente/extratos/periodo?codigoPeriferico=000&agencia=3861&numeroConta=38959&razaoConta=0&dataInicial=2020-01-01&dataFinal=2020-06-16&qtdOcorrencias=3&chaveRestart=",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"bgsl-srv-saldo-extrato-entr",
+						"api",
+						"v1",
+						"contaCorrente",
+						"extratos",
+						"periodo"
+					],
+					"query": [
+						{
+							"key": "codigoPeriferico",
+							"value": "000"
+						},
+						{
+							"key": "agencia",
+							"value": "3861"
+						},
+						{
+							"key": "numeroConta",
+							"value": "38959"
+						},
+						{
+							"key": "razaoConta",
+							"value": "0"
+						},
+						{
+							"key": "dataInicial",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "dataFinal",
+							"value": "2020-06-16"
+						},
+						{
+							"key": "qtdOcorrencias",
+							"value": "3"
+						},
+						{
+							"key": "chaveRestart",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conta Corrente - Saldos",
+			"_postman_id": "b05dc0cc-cb44-48a6-8d46-ddfedc63a8b0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaCorrente/saldos?codigoPeriferico=000&agencia=3963&numeroConta=404&razaoConta=0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"bgsl-srv-saldo-extrato-entr",
+						"api",
+						"v1",
+						"contaCorrente",
+						"saldos"
+					],
+					"query": [
+						{
+							"key": "codigoPeriferico",
+							"value": "000"
+						},
+						{
+							"key": "agencia",
+							"value": "3963"
+						},
+						{
+							"key": "numeroConta",
+							"value": "404"
+						},
+						{
+							"key": "razaoConta",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conta Corrente - Ultimos lançamentos",
+			"_postman_id": "ddfad741-d008-4f1e-9ffb-02a1e47e6710",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaCorrente/extratos/ultimosLancamentos?codigoPeriferico=000&agencia=02516&numeroConta=0349546&razaoConta=0&qtdOcorrencias=333",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"bgsl-srv-saldo-extrato-entr",
+						"api",
+						"v1",
+						"contaCorrente",
+						"extratos",
+						"ultimosLancamentos"
+					],
+					"query": [
+						{
+							"key": "codigoPeriferico",
+							"value": "000"
+						},
+						{
+							"key": "agencia",
+							"value": "02516"
+						},
+						{
+							"key": "numeroConta",
+							"value": "0349546"
+						},
+						{
+							"key": "razaoConta",
+							"value": "0"
+						},
+						{
+							"key": "qtdOcorrencias",
+							"value": "333"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conta Corrente - Extrato consolidado",
+			"_postman_id": "92b7b2b0-7db8-46ec-9109-8b76b20d1c16",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaCorrente/extratos/consolidado?codigoPeriferico=000&agencia=02516&numeroConta=0349546&razaoConta=0&qtdOcorrencias=300",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"bgsl-srv-saldo-extrato-entr",
+						"api",
+						"v1",
+						"contaCorrente",
+						"extratos",
+						"consolidado"
+					],
+					"query": [
+						{
+							"key": "codigoPeriferico",
+							"value": "000"
+						},
+						{
+							"key": "agencia",
+							"value": "02516"
+						},
+						{
+							"key": "numeroConta",
+							"value": "0349546"
+						},
+						{
+							"key": "razaoConta",
+							"value": "0"
+						},
+						{
+							"key": "qtdOcorrencias",
+							"value": "300"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conta Poupanca - Extratos - Lancamentos Futuros",
+			"_postman_id": "937a0cd2-bc93-4882-aa55-a101c5a3b880",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaPoupanca/extratos/lancamentosFuturos?codigoPeriferico=000&agencia=3963&numeroConta=404&razaoConta=0&qtdOcorrencias=3&chaveRestart=",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"bgsl-srv-saldo-extrato-entr",
+						"api",
+						"v1",
+						"contaPoupanca",
+						"extratos",
+						"lancamentosFuturos"
+					],
+					"query": [
+						{
+							"key": "codigoPeriferico",
+							"value": "000"
+						},
+						{
+							"key": "agencia",
+							"value": "3963"
+						},
+						{
+							"key": "numeroConta",
+							"value": "404"
+						},
+						{
+							"key": "razaoConta",
+							"value": "0"
+						},
+						{
+							"key": "qtdOcorrencias",
+							"value": "3"
+						},
+						{
+							"key": "chaveRestart",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conta Poupanca - Extratos - Periodo",
+			"_postman_id": "4751435c-1504-4710-89ec-59aef305840e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaPoupanca/extratos/periodo?codigoPeriferico=000&agencia=3861&numeroConta=38959&razaoConta=0&dataInicial=2019-01-08&dataFinal=2020-05-26&qtdOcorrencias=2&chaveRestart=",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"bgsl-srv-saldo-extrato-entr",
+						"api",
+						"v1",
+						"contaPoupanca",
+						"extratos",
+						"periodo"
+					],
+					"query": [
+						{
+							"key": "codigoPeriferico",
+							"value": "000"
+						},
+						{
+							"key": "agencia",
+							"value": "3861"
+						},
+						{
+							"key": "numeroConta",
+							"value": "38959"
+						},
+						{
+							"key": "razaoConta",
+							"value": "0"
+						},
+						{
+							"key": "dataInicial",
+							"value": "2019-01-08"
+						},
+						{
+							"key": "dataFinal",
+							"value": "2020-05-26"
+						},
+						{
+							"key": "qtdOcorrencias",
+							"value": "2"
+						},
+						{
+							"key": "chaveRestart",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conta Poupanca - Saldos",
+			"_postman_id": "0ae8658c-1aa4-4ae5-ab17-8849d0f9e915",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaPoupanca/saldos?codigoPeriferico=000&agencia=3963&numeroConta=404&razaoConta=0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"bgsl-srv-saldo-extrato-entr",
+						"api",
+						"v1",
+						"contaPoupanca",
+						"saldos"
+					],
+					"query": [
+						{
+							"key": "codigoPeriferico",
+							"value": "000"
+						},
+						{
+							"key": "agencia",
+							"value": "3963"
+						},
+						{
+							"key": "numeroConta",
+							"value": "404"
+						},
+						{
+							"key": "razaoConta",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conta Poupança - Ultimos lançamentos",
+			"_postman_id": "50698e4c-7975-422f-aa14-eef9c4faced1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaPoupanca/extratos/ultimosLancamentos?codigoPeriferico=000&agencia=02516&numeroConta=0349546&razaoConta=0&qtdOcorrencias=10",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"bgsl-srv-saldo-extrato-entr",
+						"api",
+						"v1",
+						"contaPoupanca",
+						"extratos",
+						"ultimosLancamentos"
+					],
+					"query": [
+						{
+							"key": "codigoPeriferico",
+							"value": "000"
+						},
+						{
+							"key": "agencia",
+							"value": "02516"
+						},
+						{
+							"key": "numeroConta",
+							"value": "0349546"
+						},
+						{
+							"key": "razaoConta",
+							"value": "0"
+						},
+						{
+							"key": "qtdOcorrencias",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conta Poupança - Extrato consolidado",
+			"_postman_id": "de34af9b-057f-438c-b4e6-a06b309e60af",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaPoupanca/extratos/consolidado?codigoPeriferico=000&agencia=02516&numeroConta=0349546&razaoConta=0&qtdOcorrencias=10",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"bgsl-srv-saldo-extrato-entr",
+						"api",
+						"v1",
+						"contaPoupanca",
+						"extratos",
+						"consolidado"
+					],
+					"query": [
+						{
+							"key": "codigoPeriferico",
+							"value": "000"
+						},
+						{
+							"key": "agencia",
+							"value": "02516"
+						},
+						{
+							"key": "numeroConta",
+							"value": "0349546"
+						},
+						{
+							"key": "razaoConta",
+							"value": "0"
+						},
+						{
+							"key": "qtdOcorrencias",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
