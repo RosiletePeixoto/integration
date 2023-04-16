@@ -1,535 +1,4643 @@
 {
 	"info": {
-		"_postman_id": "a494dc26-ff87-4d9d-bee9-3e1fccdae148",
-		"name": "bgsl-srv-saldo-extrato-entr",
+		"_postman_id": "52d7a08b-e96a-4616-838f-450ff314bce2",
+		"name": "Api Documentation",
+		"description": "Api Documentation",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Conta Corrente - Extratos - Lancamentos Futuros",
-			"_postman_id": "3d249a4a-eabd-447a-b422-6a15f7daa85b",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaCorrente/extratos/lancamentosFuturos?codigoPeriferico=000&agencia=02516&numeroConta=0349546&razaoConta=0&qtdOcorrencias=200&chaveRestart=",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"bgsl-srv-saldo-extrato-entr",
-						"api",
-						"v1",
-						"contaCorrente",
-						"extratos",
-						"lancamentosFuturos"
-					],
-					"query": [
+			"name": "consultas",
+			"item": [
+				{
+					"name": "conta Corrente",
+					"item": [
 						{
-							"key": "codigoPeriferico",
-							"value": "000"
+							"name": "extratos",
+							"item": [
+								{
+									"name": "Extrato lançamentos futuros de uma Conta Corrente.",
+									"_postman_id": "16d3ee84-a4d0-4a42-aed1-768025be20c1",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaCorrente",
+												"extratos",
+												"lancamentosFuturos"
+											],
+											"query": [
+												{
+													"description": "(Required) Código do Periférico</br>[max:3]<br/>Ex: 999",
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) Agência</br>[max:4]<br/>Ex: 1234",
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Número da Conta</br>[max:7]<br/>Ex:  1234567",
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"description": "(Required) Razão da conta</br>[max:4]<br/>Ex: 0761",
+													"key": "razaoConta",
+													"value": "<integer>"
+												},
+												{
+													"description": "Data inicial [ formato: yyyy-MM-dd ]<br/>Ex: 1999-12-01",
+													"key": "dataInicial",
+													"value": "<string>"
+												},
+												{
+													"description": "Data Final [ formato: yyyy-MM-dd ]<br/>Ex: 1999-12-01",
+													"key": "dataFinal",
+													"value": "<string>"
+												}
+											]
+										},
+										"description": "Extrato lançamentos futuros de uma Conta Corrente."
+									},
+									"response": [
+										{
+											"id": "0d958aa6-20f0-401a-b9c7-6c2758726f98",
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "268996f6-047f-42dc-9a9e-ca39eb942a7e",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "31a5d690-0f7a-482c-b647-99fe743229b6",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -10992965,\n \"contaPoupancaFacil\": -23344267,\n \"lancamentos\": [\n  {\n   \"codigoLancamento\": 8744162,\n   \"dataLancamento\": \"sint\",\n   \"descricaoCompletaLancamento\": \"sed ipsum sunt\",\n   \"descricaoResumidaLancamento\": \"veniam adipisicing\",\n   \"numeroDocumento\": 30415192,\n   \"tipoLancamento\": \"dolor officia eiusmod\",\n   \"valorLancamento\": 6059120.250952169\n  },\n  {\n   \"codigoLancamento\": 1629132,\n   \"dataLancamento\": \"Excepteur tempor pariatur non minim\",\n   \"descricaoCompletaLancamento\": \"dolore mollit in culpa\",\n   \"descricaoResumidaLancamento\": \"deserunt et eiusmod pariatur\",\n   \"numeroDocumento\": 24553229,\n   \"tipoLancamento\": \"fugiat\",\n   \"valorLancamento\": 82174861.52260733\n  }\n ],\n \"lancamentosIdentificados\": [\n  {\n   \"codigoLancamento\": 60617283,\n   \"dataLancamento\": \"ea exercitation\",\n   \"descricaoCompletaLancamento\": \"labore enim irure laborum ut\",\n   \"descricaoResumidaLancamento\": \"deserunt aliquip ipsum occaecat id\",\n   \"identificacaoLancamento\": \"id\",\n   \"numeroDocumento\": -55992609,\n   \"tipoLancamento\": \"in voluptate\",\n   \"valorLancamento\": 45207785.183806986\n  },\n  {\n   \"codigoLancamento\": 21222687,\n   \"dataLancamento\": \"ex dolore Ut\",\n   \"descricaoCompletaLancamento\": \"Exc\",\n   \"descricaoResumidaLancamento\": \"deserunt in aliqua\",\n   \"identificacaoLancamento\": \"qui ipsum\",\n   \"numeroDocumento\": -77027128,\n   \"tipoLancamento\": \"cupidatat dolor elit\",\n   \"valorLancamento\": -40755512.80286156\n  }\n ],\n \"nomeCliente\": \"in quis vol\",\n \"numeroConta\": -43252707,\n \"razaoConta\": 13755125,\n \"statusCoberturaAutomatica\": \"et do in\",\n \"statusContaCorrente\": \"nulla ea et\",\n \"statusContaPoupanca\": \"ut ipsum tempor in\"\n}"
+										},
+										{
+											"id": "3d6ab401-2a16-4d6c-8cff-ddf15457c21e",
+											"name": "Forbbiden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "d0ffc712-2401-4bf5-a725-502aff95249e",
+											"name": "Bussiness Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -92490167,\n \"mensagemRetorno\": \"consequat ut aliquip\"\n}"
+										},
+										{
+											"id": "e67750c3-f352-45ba-87d3-6d922f048047",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Extrato Mensal de uma Conta Corrente.",
+									"_postman_id": "43dcf00f-033d-4e83-829f-0c17c458ddb1",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaCorrente",
+												"extratos",
+												"mensal"
+											],
+											"query": [
+												{
+													"description": "(Required) Código do Periférico</br>[max:3]<br/>Ex: 999",
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) Agência da Conta</br>[max:4]<br/>Ex: 1234",
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Número da Conta</br>[max:7]<br/>Ex:  1234567",
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"description": "(Required) Razão da conta</br>[max:4]<br/>Ex: 0761",
+													"key": "razaoConta",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Mes para Consultar o Extrato<br/>Ex: 10<ul><li>1:Janeiro</li><li>2:Fevereiro</li><li>3:Março</li><li>4:Abril</li><li>5:Maio</li><li>6:Junho</li><li>7:Julho</li><li>8:Agosto</li><li>9:Setembro</li><li>10:Outubro</li><li>11:Novembro</li><li>12:Dezembro</li></ul>",
+													"key": "mes",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Extrato Mensal de uma Conta Corrente."
+									},
+									"response": [
+										{
+											"id": "11fd2803-a0c8-404d-a580-d285684b7797",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "1410f183-934e-4132-a006-53ad77de3048",
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "37215af5-4484-4e50-909c-b975c8e85787",
+											"name": "Forbbiden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "b9d35190-5c43-4043-87d9-6b5fbf89c398",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "d2fe4642-9e63-4188-bf42-73de673976d7",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -31913637,\n \"nomeCliente\": \"enim eu\",\n \"numeroConta\": 77027452,\n \"ocorrenciaExtratos\": [\n  {\n   \"codigoLancamento\": 36760952,\n   \"dataDebitoCpmf\": \"in officia Lorem minim magna\",\n   \"dataLancamento\": \"mollit\",\n   \"descricaoCompletaLancamento\": \"\",\n   \"descricaoResumidaLancamento\": \"Ex\",\n   \"numeroDocumento\": -57345047,\n   \"tipoLancamento\": \"adipisicing anim aute commodo sint\",\n   \"valorCpmf\": 89484501.21001965,\n   \"valorLancamento\": -47532123.148836106\n  },\n  {\n   \"codigoLancamento\": 79156611,\n   \"dataDebitoCpmf\": \"ipsum culpa\",\n   \"dataLancamento\": \"pariatur irure Duis Excepteur\",\n   \"descricaoCompletaLancamento\": \"amet consequat in\",\n   \"descricaoResumidaLancamento\": \"Duis tempor ut dolo\",\n   \"numeroDocumento\": 33140272,\n   \"tipoLancamento\": \"officia nisi qui proident non\",\n   \"valorCpmf\": 55762258.153155476,\n   \"valorLancamento\": 59604933.37336233\n  }\n ],\n \"ocorrenciaIdentificacaoExtratos\": [\n  {\n   \"codigoLancamento\": 30712174,\n   \"dataDebitoCpmf\": \"in mollit tempor ea cupidatat\",\n   \"dataLancamento\": \"elit ullamco commodo ipsum\",\n   \"descricaoCompletaLancamento\": \"et\",\n   \"descricaoResumidaLancamento\": \"occaecat cillum\",\n   \"identificacaoLancamento\": \"eiusmod\",\n   \"numeroDocumento\": -93434191,\n   \"tipoLancamento\": \"Ut\",\n   \"valorCpmf\": 77468516.21393621,\n   \"valorLancamento\": -83748556.44713213\n  },\n  {\n   \"codigoLancamento\": 58943442,\n   \"dataDebitoCpmf\": \"amet laborum\",\n   \"dataLancamento\": \"quis tem\",\n   \"descricaoCompletaLancamento\": \"Duis culpa\",\n   \"descricaoResumidaLancamento\": \"ipsum\",\n   \"identificacaoLancamento\": \"ut\",\n   \"numeroDocumento\": 56652068,\n   \"tipoLancamento\": \"\",\n   \"valorCpmf\": 46988425.39197537,\n   \"valorLancamento\": 85364255.58864212\n  }\n ],\n \"razaoConta\": -5815325\n}"
+										},
+										{
+											"id": "feeadc03-03b0-488c-9903-3de40bd7b0c6",
+											"name": "Bussiness Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -92490167,\n \"mensagemRetorno\": \"consequat ut aliquip\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Extrato Por periodo de uma Conta Corrente.",
+									"_postman_id": "c522fbdb-ddee-4ffd-9870-b36348620d15",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaCorrente",
+												"extratos",
+												"periodo"
+											],
+											"query": [
+												{
+													"description": "(Required) Código do Periférico</br>[max:3]<br/>Ex: 999",
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) Agência da Conta</br>[max:4]<br/>Ex: 1234",
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Número da Conta</br>[max:7]<br/>Ex:  1234567",
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"description": "(Required) Razão da conta</br>[max:4]<br/>Ex: 0761",
+													"key": "razaoConta",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Data inicial [ formato: yyyy-MM-dd ]<br/>Ex: 1999-12-01",
+													"key": "dataInicial",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) Data Final [ formato: yyyy-MM-dd ]<br/>Ex: 1999-12-01",
+													"key": "dataFinal",
+													"value": "<string>"
+												}
+											]
+										},
+										"description": "Extrato por periodo de uma Conta Corrente."
+									},
+									"response": [
+										{
+											"id": "6b83213c-2216-4062-b839-281eb2375915",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "72d57860-d6f8-4a39-a6f6-360c585381fd",
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "8571a5f3-f4ca-4729-8a38-b59010cc10dd",
+											"name": "Bussiness Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -92490167,\n \"mensagemRetorno\": \"consequat ut aliquip\"\n}"
+										},
+										{
+											"id": "8b0163c3-abb3-4235-9b91-56ba6e5eef6c",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -31913637,\n \"nomeCliente\": \"enim eu\",\n \"numeroConta\": 77027452,\n \"ocorrenciaExtratos\": [\n  {\n   \"codigoLancamento\": 36760952,\n   \"dataDebitoCpmf\": \"in officia Lorem minim magna\",\n   \"dataLancamento\": \"mollit\",\n   \"descricaoCompletaLancamento\": \"\",\n   \"descricaoResumidaLancamento\": \"Ex\",\n   \"numeroDocumento\": -57345047,\n   \"tipoLancamento\": \"adipisicing anim aute commodo sint\",\n   \"valorCpmf\": 89484501.21001965,\n   \"valorLancamento\": -47532123.148836106\n  },\n  {\n   \"codigoLancamento\": 79156611,\n   \"dataDebitoCpmf\": \"ipsum culpa\",\n   \"dataLancamento\": \"pariatur irure Duis Excepteur\",\n   \"descricaoCompletaLancamento\": \"amet consequat in\",\n   \"descricaoResumidaLancamento\": \"Duis tempor ut dolo\",\n   \"numeroDocumento\": 33140272,\n   \"tipoLancamento\": \"officia nisi qui proident non\",\n   \"valorCpmf\": 55762258.153155476,\n   \"valorLancamento\": 59604933.37336233\n  }\n ],\n \"ocorrenciaIdentificacaoExtratos\": [\n  {\n   \"codigoLancamento\": 30712174,\n   \"dataDebitoCpmf\": \"in mollit tempor ea cupidatat\",\n   \"dataLancamento\": \"elit ullamco commodo ipsum\",\n   \"descricaoCompletaLancamento\": \"et\",\n   \"descricaoResumidaLancamento\": \"occaecat cillum\",\n   \"identificacaoLancamento\": \"eiusmod\",\n   \"numeroDocumento\": -93434191,\n   \"tipoLancamento\": \"Ut\",\n   \"valorCpmf\": 77468516.21393621,\n   \"valorLancamento\": -83748556.44713213\n  },\n  {\n   \"codigoLancamento\": 58943442,\n   \"dataDebitoCpmf\": \"amet laborum\",\n   \"dataLancamento\": \"quis tem\",\n   \"descricaoCompletaLancamento\": \"Duis culpa\",\n   \"descricaoResumidaLancamento\": \"ipsum\",\n   \"identificacaoLancamento\": \"ut\",\n   \"numeroDocumento\": 56652068,\n   \"tipoLancamento\": \"\",\n   \"valorCpmf\": 46988425.39197537,\n   \"valorLancamento\": 85364255.58864212\n  }\n ],\n \"razaoConta\": -5815325\n}"
+										},
+										{
+											"id": "8db89d90-96b3-4e11-aa7a-01a5077cf955",
+											"name": "Forbbiden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "bf3025fa-7c32-4204-91d6-6fb59f83f53b",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Extrato Ultimos Lançamentos - Conta Corrente.",
+									"_postman_id": "8eb1b660-cac4-4a4d-a0a5-ea032fd557ca",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaCorrente",
+												"extratos",
+												"ultimosLancamentos"
+											],
+											"query": [
+												{
+													"description": "(Required) Código do Periférico</br>[max:3]<br/>Ex: 999",
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) Agência da Conta</br>[max:4]<br/>Ex: 1234",
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Número da Conta</br>[max:7]<br/>Ex:  1234567",
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"description": "(Required) Razão da conta</br>[max:4]<br/>Ex: 0761",
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Extrato Ultimos Lançamentos - Conta Corrente."
+									},
+									"response": [
+										{
+											"id": "017c9164-7a0c-4cf2-977d-72f0b2a498a9",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "0a5d00f3-9a11-4bd8-bbf7-9c9675e8087f",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "21ac584f-9525-4d77-88e7-3133f1a6235a",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": 4061016,\n \"contaPoupancaFacil\": 30958402,\n \"lancamentos\": [\n  {\n   \"codigoLancamento\": -37569696,\n   \"dataLancamento\": \"ut non deserunt pariatur\",\n   \"descricaoCompletaLancamento\": \"irure nisi tempor aliquip elit\",\n   \"descricaoResumidaLancamento\": \"sun\",\n   \"numeroDocumento\": -44262246,\n   \"tipoLancamento\": \"irure est aliquip\",\n   \"valorLancamento\": -41934878.87393434\n  },\n  {\n   \"codigoLancamento\": 35728266,\n   \"dataLancamento\": \"ut laborum pariatur dolore\",\n   \"descricaoCompletaLancamento\": \"aliquip cillum ut\",\n   \"descricaoResumidaLancamento\": \"ut deserunt\",\n   \"numeroDocumento\": -25447187,\n   \"tipoLancamento\": \"velit labore in ea\",\n   \"valorLancamento\": -71757182.48493892\n  }\n ],\n \"lancamentosIdentificados\": [\n  {\n   \"codigoLancamento\": -52683722,\n   \"dataLancamento\": \"dolor consectetur occaecat\",\n   \"descricaoCompletaLancamento\": \"aliqua labore in\",\n   \"descricaoResumidaLancamento\": \"incididunt ut ipsum qui\",\n   \"identificacaoLancamento\": \"consectetur\",\n   \"numeroDocumento\": -51098483,\n   \"tipoLancamento\": \"nulla\",\n   \"valorLancamento\": -32169782.904664814\n  },\n  {\n   \"codigoLancamento\": -157904,\n   \"dataLancamento\": \"aliquip id aute laborum\",\n   \"descricaoCompletaLancamento\": \"et ad commodo laboris\",\n   \"descricaoResumidaLancamento\": \"nostrud sit ut\",\n   \"identificacaoLancamento\": \"reprehenderit\",\n   \"numeroDocumento\": 19682770,\n   \"tipoLancamento\": \"amet cillum minim ut\",\n   \"valorLancamento\": -12554822.73984474\n  }\n ],\n \"nomeCliente\": \"deserunt enim ea dolor\",\n \"numeroConta\": -41320967,\n \"razaoConta\": -54427349,\n \"statusCoberturaAutomatica\": \"quis culpa occaecat\",\n \"statusContaCorrente\": \"dolo\",\n \"statusContaPoupanca\": \"sed cupidatat ipsum sit Ut\"\n}"
+										},
+										{
+											"id": "3c68f49b-93c6-4ff4-adc3-24aa6c5517f0",
+											"name": "Bussiness Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -92490167,\n \"mensagemRetorno\": \"consequat ut aliquip\"\n}"
+										},
+										{
+											"id": "a8da111d-1723-4117-a7a8-dab681a25da0",
+											"name": "Forbbiden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "f09ad3da-301d-4095-8b68-e75134304f29",
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaCorrente/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaCorrente",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										}
+									]
+								}
+							],
+							"_postman_id": "31e16f34-3746-4eac-b320-337c66e0515f",
+							"_postman_isSubFolder": true
 						},
 						{
-							"key": "agencia",
-							"value": "02516"
-						},
-						{
-							"key": "numeroConta",
-							"value": "0349546"
-						},
-						{
-							"key": "razaoConta",
-							"value": "0"
-						},
-						{
-							"key": "qtdOcorrencias",
-							"value": "200"
-						},
-						{
-							"key": "chaveRestart",
-							"value": ""
+							"name": "Consulta o Saldo de uma Conta Corrente.",
+							"_postman_id": "86fda5ec-6479-4ee3-92a0-d18447b5512a",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) API access token",
+										"key": "access-token",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/consultas/contaCorrente/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"consultas",
+										"contaCorrente",
+										"saldos"
+									],
+									"query": [
+										{
+											"description": "(Required) Código do Periférico</br>[max:3]<br/>Ex: 999",
+											"key": "codigoPeriferico",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) Agência</br>[max:4]<br/>Ex: 1234",
+											"key": "agencia",
+											"value": "<integer>"
+										},
+										{
+											"description": "(Required) Número da Conta</br>[max:7]<br/>Ex:  1234567",
+											"key": "numeroConta",
+											"value": "<long>"
+										},
+										{
+											"description": "(Required) Razão da conta</br>[max:4]<br/>Ex: 0761",
+											"key": "razaoConta",
+											"value": "<integer>"
+										}
+									]
+								},
+								"description": "Consulta o Saldo de uma Conta Corrente."
+							},
+							"response": [
+								{
+									"id": "1f1b1dda-b438-4a56-9075-6022bf9004af",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaCorrente/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaCorrente",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n \"codigoRetorno\": 40559052,\n \"contaPoupancaFacil\": 98616665,\n \"creditoPreAprovado\": {\n  \"dataLimite\": \"Ut aliquip cillum nisi\",\n  \"descricao\": \"nisi deserunt in ea\",\n  \"identificacaoBaixaAutomatica\": \"ipsum aliquip \"\n },\n \"nomeCliente\": \"voluptate dolore aliquip ullamco dolor\",\n \"numeroConta\": -60182659,\n \"razaoConta\": -16073205,\n \"saldosDiversos\": [\n  {\n   \"descricao\": \"SUJEITO A ANÁLISE DE CRÉDITO. PARA CONTRATAÇÃO, DIRIJA-SE A SUA AGÊNCIA.\",\n   \"identificacaoBaixaAutomatica\": \"1\",\n   \"identificacaoProduto\": 951,\n   \"identificacaoSaldo\": \"1\",\n   \"saldo\": 20.56\n  },\n  {\n   \"descricao\": \"SUJEITO A ANÁLISE DE CRÉDITO. PARA CONTRATAÇÃO, DIRIJA-SE A SUA AGÊNCIA.\",\n   \"identificacaoBaixaAutomatica\": \"1\",\n   \"identificacaoProduto\": 951,\n   \"identificacaoSaldo\": \"1\",\n   \"saldo\": 20.56\n  }\n ],\n \"statusCoberturaAutomatica\": \"eiusmod sit et\",\n \"statusContaCorrente\": \"pariatur est qui\",\n \"statusContaPoupanca\": \"Duis officia Excepteur\"\n}"
+								},
+								{
+									"id": "9599e880-7c62-417d-84b5-e095cf56aea2",
+									"name": "Forbbiden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaCorrente/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaCorrente",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "a35fc1ef-8eeb-4066-bebd-d3e51976bac0",
+									"name": "Bussiness Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaCorrente/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaCorrente",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n \"codigoRetorno\": -92490167,\n \"mensagemRetorno\": \"consequat ut aliquip\"\n}"
+								},
+								{
+									"id": "a423db9b-47e0-4db3-8ac4-7364ef8a3173",
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaCorrente/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaCorrente",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "b01a9cf1-382e-45a5-bab3-7d3695e63ccc",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaCorrente/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaCorrente",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "ed569dfc-f766-4d28-a62f-634121c7a177",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaCorrente/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaCorrente",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
 						}
-					]
+					],
+					"_postman_id": "bc1b110c-a4b3-475a-85b2-51644caa84cf",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "conta Poupanca",
+					"item": [
+						{
+							"name": "extratos",
+							"item": [
+								{
+									"name": "Extrato Demonstrativo - Conta Poupança.",
+									"_postman_id": "eab31b32-6405-4bc0-8df1-239a3d934abc",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/demonstrativos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaPoupanca",
+												"extratos",
+												"demonstrativos"
+											],
+											"query": [
+												{
+													"description": "(Required) Código do Periférico</br>[max:3]<br/>Ex: 999",
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) Agência da Conta</br>[max:4]<br/>Ex: 1234",
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Número da Conta</br>[max:7]<br/>Ex:  1234567",
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"description": "(Required) Razão da conta</br>[max:4]<br/>Ex: 0761",
+													"key": "razaoConta",
+													"value": "<integer>"
+												},
+												{
+													"description": "Data inicial [ formato: yyyy-MM-dd ]<br/>Ex: 1999-12-01",
+													"key": "dataInicial",
+													"value": "<string>"
+												},
+												{
+													"description": "Data Final [ formato: yyyy-MM-dd ]<br/>Ex: 1999-12-01",
+													"key": "dataFinal",
+													"value": "<string>"
+												}
+											]
+										},
+										"description": "Extrato Demonstrativo - Conta Poupança."
+									},
+									"response": [
+										{
+											"id": "213dfff2-8c70-494e-9660-671be92f75d7",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/demonstrativos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"demonstrativos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -58754715,\n \"dataCorrenteSaldo\": \"quis Lorem\",\n \"identificadorModalidadeConta\": \"ullamco Excepteur amet mollit velit\",\n \"nomeCliente\": \"eu officia ea consectetur\",\n \"numeroConta\": 59158280,\n \"ocorrenciasExtratosDemonstrativos\": [\n  {\n   \"diaAniversario\": \"reprehenderit eu tempor sunt\",\n   \"identificadorSaldo\": \"sunt voluptate ea\",\n   \"indicePoupanca\": -33391365.507187046,\n   \"rendimento\": 66843753.24612427,\n   \"saldoAniversario\": 65205744.16544941,\n   \"saldoBase\": 99403481.74376789\n  },\n  {\n   \"diaAniversario\": \"ipsum occaecat\",\n   \"identificadorSaldo\": \"velit in aliquip\",\n   \"indicePoupanca\": -42699036.52385798,\n   \"rendimento\": -39626843.29008184,\n   \"saldoAniversario\": -33236271.04509277,\n   \"saldoBase\": 80411556.42579257\n  }\n ],\n \"razaoConta\": -82272900,\n \"statusContaCorrente\": \"nisi dolor laboris voluptate do\",\n \"statusContaPoupanca\": \"laborum\",\n \"totalRendimentos\": 53679573.39786428,\n \"totalSaldo\": 28910952.659472317\n}"
+										},
+										{
+											"id": "29680dfe-7332-4a5d-ade1-8473f55e0c67",
+											"name": "Forbbiden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/demonstrativos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"demonstrativos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "2f0292ea-2779-4edd-b950-94917f60f335",
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/demonstrativos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"demonstrativos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "4b3009c6-0cfb-44f3-924c-6b9677468d97",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/demonstrativos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"demonstrativos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "5be95a4f-5619-4cbb-a74e-545fc179efd0",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/demonstrativos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"demonstrativos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "6b30fbdd-8408-4189-a574-fa25d7cefae4",
+											"name": "Bussiness Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/demonstrativos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"demonstrativos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -92490167,\n \"mensagemRetorno\": \"consequat ut aliquip\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Extrato lançamentos futuros de uma Conta Poupança.",
+									"_postman_id": "a6bd5d3e-d6bd-402d-bdbc-3b9d5fa0a380",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaPoupanca",
+												"extratos",
+												"lancamentosFuturos"
+											],
+											"query": [
+												{
+													"description": "(Required) Código do Periférico</br>[max:3]<br/>Ex: 999",
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) Agência</br>[max:4]<br/>Ex: 1234",
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Número da Conta</br>[max:7]<br/>Ex:  1234567",
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"description": "(Required) Razão da conta</br>[max:4]<br/>Ex: 0761",
+													"key": "razaoConta",
+													"value": "<integer>"
+												},
+												{
+													"description": "Data inicial [ formato: yyyy-MM-dd ]<br/>Ex: 1999-12-01",
+													"key": "dataInicial",
+													"value": "<string>"
+												},
+												{
+													"description": "Data Final [ formato: yyyy-MM-dd ]<br/>Ex: 1999-12-01",
+													"key": "dataFinal",
+													"value": "<string>"
+												}
+											]
+										},
+										"description": "Extrato lançamentos futuros de uma Conta Poupança."
+									},
+									"response": [
+										{
+											"id": "30b82440-66ac-4e02-97a4-7ed7a85a5efb",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "5133cd1d-9973-4f7f-84a3-2ffdbfd34e04",
+											"name": "Forbbiden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "51fe9f61-2049-424f-8535-5a8a3bed768f",
+											"name": "Bussiness Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -92490167,\n \"mensagemRetorno\": \"consequat ut aliquip\"\n}"
+										},
+										{
+											"id": "8a6f8538-4d84-4181-9862-a5d11de16a17",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": 91827723,\n \"identificadorModalidadeConta\": \"elit sed nostrud\",\n \"lancamentos\": [\n  {\n   \"codigoLancamento\": 1645515,\n   \"dataLancamento\": \"proi\",\n   \"descricaoCompletaLancamento\": \"tempor\",\n   \"descricaoResumidaLancamento\": \"nostrud anim in\",\n   \"numeroDocumento\": -23794002,\n   \"tipoLancamento\": \"Lorem laboris anim\",\n   \"valorLancamento\": -87473600.62415783\n  },\n  {\n   \"codigoLancamento\": -25490636,\n   \"dataLancamento\": \"id\",\n   \"descricaoCompletaLancamento\": \"voluptate reprehenderit commodo non\",\n   \"descricaoResumidaLancamento\": \"dolor est voluptate irure\",\n   \"numeroDocumento\": -74948827,\n   \"tipoLancamento\": \"fugiat\",\n   \"valorLancamento\": 28196274.84271963\n  }\n ],\n \"lancamentosIdentificados\": [\n  {\n   \"codigoLancamento\": -2032401,\n   \"dataLancamento\": \"dolore\",\n   \"descricaoCompletaLancamento\": \"cupidatat\",\n   \"descricaoResumidaLancamento\": \"est minim ad reprehenderit\",\n   \"identificacaoLancamento\": \"culpa dolor\",\n   \"numeroDocumento\": -31994424,\n   \"tipoLancamento\": \"non\",\n   \"valorLancamento\": 45433835.77068436\n  },\n  {\n   \"codigoLancamento\": 9478146,\n   \"dataLancamento\": \"ut dolore\",\n   \"descricaoCompletaLancamento\": \"ullamco dolore quis occaecat\",\n   \"descricaoResumidaLancamento\": \"nostrud reprehenderit tempor sed\",\n   \"identificacaoLancamento\": \"ad velit\",\n   \"numeroDocumento\": -47612293,\n   \"tipoLancamento\": \"conse\",\n   \"valorLancamento\": -59968173.70905836\n  }\n ],\n \"nomeCliente\": \"est ad proident anim reprehenderit\",\n \"numeroConta\": 15516078,\n \"razaoConta\": 24279867,\n \"statusContaCorrente\": \"labore laboris dolore\",\n \"statusContaPoupanca\": \"qui velit dolor do sunt\"\n}"
+										},
+										{
+											"id": "dfbda92a-48a7-4bce-bd08-7d7735c47c62",
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "f6979cf2-a39d-4920-af2c-00e910b6073f",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/lancamentosFuturos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"lancamentosFuturos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Extrato Mensal de uma Conta Poupanca.",
+									"_postman_id": "2752e070-d101-4d4e-bd61-5689abde1c39",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaPoupanca",
+												"extratos",
+												"mensal"
+											],
+											"query": [
+												{
+													"description": "(Required) Código do Periférico</br>[max:3]<br/>Ex: 999",
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) Agência da Conta</br>[max:4]<br/>Ex: 1234",
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Número da Conta</br>[max:7]<br/>Ex:  1234567",
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"description": "(Required) Razão da conta</br>[max:4]<br/>Ex: 0761",
+													"key": "razaoConta",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Mes para Consultar o Extrato<br/>Ex: 10<ul><li>1:Janeiro</li><li>2:Fevereiro</li><li>3:Março</li><li>4:Abril</li><li>5:Maio</li><li>6:Junho</li><li>7:Julho</li><li>8:Agosto</li><li>9:Setembro</li><li>10:Outubro</li><li>11:Novembro</li><li>12:Dezembro</li></ul>",
+													"key": "mes",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Extrato Mensal de uma Conta Poupanca."
+									},
+									"response": [
+										{
+											"id": "5db8959c-0626-477e-9b66-7cd1922c35c6",
+											"name": "Bussiness Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -92490167,\n \"mensagemRetorno\": \"consequat ut aliquip\"\n}"
+										},
+										{
+											"id": "6570b10c-1e7f-4d89-9c7d-162b157f0181",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "6d7a3346-eaa9-4603-ba40-d7e2aca79e8f",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "883c2ce4-ff32-402e-a959-dcc3d3c76e58",
+											"name": "Forbbiden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "d65964b8-9d9e-4a3d-b346-4cd44dc97626",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": 66262087,\n \"nomeCliente\": \"in voluptate\",\n \"numeroConta\": -15649612,\n \"ocorrenciaExtratos\": [\n  {\n   \"codigoLancamento\": 94442165,\n   \"dataDebitoCpmf\": \"enim ex dolore\",\n   \"dataLancamento\": \"qui adipisicing\",\n   \"descricaoCompletaLancamento\": \"cillum consequat fugiat\",\n   \"descricaoResumidaLancamento\": \"in aute occae\",\n   \"numeroDocumento\": 38171678,\n   \"tipoLancamento\": \"Lorem Excepteur\",\n   \"valorCpmf\": -36152756.60162509,\n   \"valorLancamento\": -92238534.37297902\n  },\n  {\n   \"codigoLancamento\": 51519055,\n   \"dataDebitoCpmf\": \"aliquip veniam Ut in\",\n   \"dataLancamento\": \"ad consequat labore ut\",\n   \"descricaoCompletaLancamento\": \"id fugiat adipisicing sint\",\n   \"descricaoResumidaLancamento\": \"sint pariatur et elit\",\n   \"numeroDocumento\": -97121603,\n   \"tipoLancamento\": \"Duis Excepteur Ut\",\n   \"valorCpmf\": 32946240.829730615,\n   \"valorLancamento\": 12845379.976816759\n  }\n ],\n \"ocorrenciaIdentificacaoExtratos\": [\n  {\n   \"codigoLancamento\": -14713836,\n   \"dataDebitoCpmf\": \"in in exercitation\",\n   \"dataLancamento\": \"nulla cillum\",\n   \"descricaoCompletaLancamento\": \"aute cillum consectetur\",\n   \"descricaoResumidaLancamento\": \"proident\",\n   \"identificacaoLancamento\": \"sit nisi\",\n   \"numeroDocumento\": -78295608,\n   \"tipoLancamento\": \"ad esse magna\",\n   \"valorCpmf\": 27670355.23190388,\n   \"valorLancamento\": -10215767.00466387\n  },\n  {\n   \"codigoLancamento\": -89868998,\n   \"dataDebitoCpmf\": \"elit in voluptate\",\n   \"dataLancamento\": \"sint aliquip ali\",\n   \"descricaoCompletaLancamento\": \"ut ullamco dol\",\n   \"descricaoResumidaLancamento\": \"tempor consequat nostrud sunt fugiat\",\n   \"identificacaoLancamento\": \"ea minim anim Duis\",\n   \"numeroDocumento\": -13521849,\n   \"tipoLancamento\": \"qui sint reprehenderit ut\",\n   \"valorCpmf\": -51948655.96105207,\n   \"valorLancamento\": -11962335.232380778\n  }\n ],\n \"razaoConta\": -38335113\n}"
+										},
+										{
+											"id": "e1f0048d-4b46-4528-9325-f622962aa928",
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/mensal?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&mes=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"mensal"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "mes",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Extrato Por periodo de uma Conta Poupanca.",
+									"_postman_id": "0a9c2235-dd5a-413c-a2b7-8892ae9e9bd2",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaPoupanca",
+												"extratos",
+												"periodo"
+											],
+											"query": [
+												{
+													"description": "(Required) Código do Periférico</br>[max:3]<br/>Ex: 999",
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) Agência da Conta</br>[max:4]<br/>Ex: 1234",
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Número da Conta</br>[max:7]<br/>Ex:  1234567",
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"description": "(Required) Razão da conta</br>[max:4]<br/>Ex: 0761",
+													"key": "razaoConta",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Data inicial [ formato: yyyy-MM-dd ]<br/>Ex: 1999-12-01",
+													"key": "dataInicial",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) Data Final [ formato: yyyy-MM-dd ]<br/>Ex: 1999-12-01",
+													"key": "dataFinal",
+													"value": "<string>"
+												}
+											]
+										},
+										"description": "Extrato por periodo de uma Conta Poupanca."
+									},
+									"response": [
+										{
+											"id": "2251b7ad-fc5b-42af-9410-2ff6e7807efe",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "445e9538-c775-4ca6-8ef0-18e9b005691b",
+											"name": "Forbbiden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "7bd1f1ad-ac74-4802-93d1-d4d17f9ea516",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "9f730956-b031-4410-a20b-74fef6aeafb1",
+											"name": "Bussiness Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -92490167,\n \"mensagemRetorno\": \"consequat ut aliquip\"\n}"
+										},
+										{
+											"id": "ad100116-a741-49c6-8841-bc2c401b40a1",
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "c712ab29-ef51-421d-92d4-f956f006da49",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/periodo?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>&dataInicial=<string>&dataFinal=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"periodo"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														},
+														{
+															"key": "dataInicial",
+															"value": "<string>"
+														},
+														{
+															"key": "dataFinal",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": 66262087,\n \"nomeCliente\": \"in voluptate\",\n \"numeroConta\": -15649612,\n \"ocorrenciaExtratos\": [\n  {\n   \"codigoLancamento\": 94442165,\n   \"dataDebitoCpmf\": \"enim ex dolore\",\n   \"dataLancamento\": \"qui adipisicing\",\n   \"descricaoCompletaLancamento\": \"cillum consequat fugiat\",\n   \"descricaoResumidaLancamento\": \"in aute occae\",\n   \"numeroDocumento\": 38171678,\n   \"tipoLancamento\": \"Lorem Excepteur\",\n   \"valorCpmf\": -36152756.60162509,\n   \"valorLancamento\": -92238534.37297902\n  },\n  {\n   \"codigoLancamento\": 51519055,\n   \"dataDebitoCpmf\": \"aliquip veniam Ut in\",\n   \"dataLancamento\": \"ad consequat labore ut\",\n   \"descricaoCompletaLancamento\": \"id fugiat adipisicing sint\",\n   \"descricaoResumidaLancamento\": \"sint pariatur et elit\",\n   \"numeroDocumento\": -97121603,\n   \"tipoLancamento\": \"Duis Excepteur Ut\",\n   \"valorCpmf\": 32946240.829730615,\n   \"valorLancamento\": 12845379.976816759\n  }\n ],\n \"ocorrenciaIdentificacaoExtratos\": [\n  {\n   \"codigoLancamento\": -14713836,\n   \"dataDebitoCpmf\": \"in in exercitation\",\n   \"dataLancamento\": \"nulla cillum\",\n   \"descricaoCompletaLancamento\": \"aute cillum consectetur\",\n   \"descricaoResumidaLancamento\": \"proident\",\n   \"identificacaoLancamento\": \"sit nisi\",\n   \"numeroDocumento\": -78295608,\n   \"tipoLancamento\": \"ad esse magna\",\n   \"valorCpmf\": 27670355.23190388,\n   \"valorLancamento\": -10215767.00466387\n  },\n  {\n   \"codigoLancamento\": -89868998,\n   \"dataDebitoCpmf\": \"elit in voluptate\",\n   \"dataLancamento\": \"sint aliquip ali\",\n   \"descricaoCompletaLancamento\": \"ut ullamco dol\",\n   \"descricaoResumidaLancamento\": \"tempor consequat nostrud sunt fugiat\",\n   \"identificacaoLancamento\": \"ea minim anim Duis\",\n   \"numeroDocumento\": -13521849,\n   \"tipoLancamento\": \"qui sint reprehenderit ut\",\n   \"valorCpmf\": -51948655.96105207,\n   \"valorLancamento\": -11962335.232380778\n  }\n ],\n \"razaoConta\": -38335113\n}"
+										}
+									]
+								},
+								{
+									"name": "Extrato Ultimos Lançamentos - Conta Poupança.",
+									"_postman_id": "416680cd-172c-4432-ba69-398279b0f173",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaPoupanca",
+												"extratos",
+												"ultimosLancamentos"
+											],
+											"query": [
+												{
+													"description": "(Required) Código do Periférico</br>[max:3]<br/>Ex: 999",
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"description": "(Required) Agência da Conta</br>[max:4]<br/>Ex: 1234",
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"description": "(Required) Número da Conta</br>[max:7]<br/>Ex:  1234567",
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"description": "(Required) Razão da conta</br>[max:4]<br/>Ex: 0761",
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										},
+										"description": "Extrato Ultimos Lançamentos - Conta Poupança."
+									},
+									"response": [
+										{
+											"id": "0e48b5a5-b3d7-4431-a450-aae5bdb6cafa",
+											"name": "Bussiness Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": -92490167,\n \"mensagemRetorno\": \"consequat ut aliquip\"\n}"
+										},
+										{
+											"id": "759c5363-7ac9-4373-afe3-ed3fc4d4f191",
+											"name": "Forbbiden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "b6d75f33-5db2-43ac-922a-edcff0ce83e2",
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "cb021337-ee84-4a34-a1b3-a8ad37615ef5",
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n \"codigoRetorno\": 84644006,\n \"identificadorModalidadeConta\": \"elit dolor\",\n \"lancamentos\": [\n  {\n   \"codigoLancamento\": 55933073,\n   \"dataLancamento\": \"dolore aliqua nisi\",\n   \"descricaoCompletaLancamento\": \"mollit consectetur ea aliqua\",\n   \"descricaoResumidaLancamento\": \"cillum paria\",\n   \"numeroDocumento\": 84730638,\n   \"tipoLancamento\": \"Ut sint dolore\",\n   \"valorLancamento\": 60324588.709481\n  },\n  {\n   \"codigoLancamento\": -64041381,\n   \"dataLancamento\": \"ea Excepteur labore Ut Duis\",\n   \"descricaoCompletaLancamento\": \"consequat i\",\n   \"descricaoResumidaLancamento\": \"laboris nisi\",\n   \"numeroDocumento\": -9006231,\n   \"tipoLancamento\": \"minim\",\n   \"valorLancamento\": -3041942.700755134\n  }\n ],\n \"lancamentosIdentificados\": [\n  {\n   \"codigoLancamento\": -30770733,\n   \"dataLancamento\": \"ea sunt incididunt cillum in\",\n   \"descricaoCompletaLancamento\": \"veniam magna qui proident\",\n   \"descricaoResumidaLancamento\": \"cupidatat nulla qui ip\",\n   \"identificacaoLancamento\": \"dolor irure\",\n   \"numeroDocumento\": -83300521,\n   \"tipoLancamento\": \"ut ad consequat\",\n   \"valorLancamento\": -69057851.3027662\n  },\n  {\n   \"codigoLancamento\": -54373248,\n   \"dataLancamento\": \"ut\",\n   \"descricaoCompletaLancamento\": \"minim mollit cillum non\",\n   \"descricaoResumidaLancamento\": \"irur\",\n   \"identificacaoLancamento\": \"Ut veniam adipisicing ut consequat\",\n   \"numeroDocumento\": 97495555,\n   \"tipoLancamento\": \"ut ipsum officia culpa incididunt\",\n   \"valorLancamento\": 71354174.10383368\n  }\n ],\n \"nomeCliente\": \"commodo quis id sunt\",\n \"numeroConta\": -17712549,\n \"razaoConta\": -7642363,\n \"statusContaCorrente\": \"eu dolor ullamco et\",\n \"statusContaPoupanca\": \"eu mollit\"\n}"
+										},
+										{
+											"id": "ec3261de-5663-492a-a7cd-1176aed8eafe",
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "f1a07664-2b53-4c79-9db4-f3b9f4955d2e",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) API access token",
+														"key": "access-token",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/consultas/contaPoupanca/extratos/ultimosLancamentos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"consultas",
+														"contaPoupanca",
+														"extratos",
+														"ultimosLancamentos"
+													],
+													"query": [
+														{
+															"key": "codigoPeriferico",
+															"value": "<string>"
+														},
+														{
+															"key": "agencia",
+															"value": "<integer>"
+														},
+														{
+															"key": "numeroConta",
+															"value": "<long>"
+														},
+														{
+															"key": "razaoConta",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										}
+									]
+								}
+							],
+							"_postman_id": "40cad2a0-4b4b-4439-a6ee-0b0f21faff32",
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Consulta o Saldo de uma Conta Poupança.",
+							"_postman_id": "22e89673-dbc9-42db-b31d-3d8247be8ae7",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) API access token",
+										"key": "access-token",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/consultas/contaPoupanca/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"consultas",
+										"contaPoupanca",
+										"saldos"
+									],
+									"query": [
+										{
+											"description": "(Required) Código do Periférico</br>[max:3]<br/>Ex: 999",
+											"key": "codigoPeriferico",
+											"value": "<string>"
+										},
+										{
+											"description": "(Required) Agência</br>[max:4]<br/>Ex: 1234",
+											"key": "agencia",
+											"value": "<integer>"
+										},
+										{
+											"description": "(Required) Número da Conta</br>[max:7]<br/>Ex:  1234567",
+											"key": "numeroConta",
+											"value": "<long>"
+										},
+										{
+											"description": "(Required) Razão da conta</br>[max:4]<br/>Ex: 0761",
+											"key": "razaoConta",
+											"value": "<integer>"
+										}
+									]
+								},
+								"description": "Consulta o Saldo de uma Conta Poupança"
+							},
+							"response": [
+								{
+									"id": "0121597b-8b8f-41c3-9bec-70ec98e9a182",
+									"name": "Forbbiden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaPoupanca/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaPoupanca",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "0ee9b354-66b9-4d8c-87d1-551a24391c47",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaPoupanca/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaPoupanca",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "5cd942c2-622a-43b8-8eb9-9db5682a2309",
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaPoupanca/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaPoupanca",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "778fd880-a39c-4226-824f-e2daa0ee6eff",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaPoupanca/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaPoupanca",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "b6e576fe-2293-446e-b504-b64970256835",
+									"name": "Bussiness Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaPoupanca/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaPoupanca",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n \"codigoRetorno\": -92490167,\n \"mensagemRetorno\": \"consequat ut aliquip\"\n}"
+								},
+								{
+									"id": "e3ca73e5-cf42-442c-ad2b-2da41b519f8b",
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) API access token",
+												"key": "access-token",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/contaPoupanca/saldos?codigoPeriferico=<string>&agencia=<integer>&numeroConta=<long>&razaoConta=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"contaPoupanca",
+												"saldos"
+											],
+											"query": [
+												{
+													"key": "codigoPeriferico",
+													"value": "<string>"
+												},
+												{
+													"key": "agencia",
+													"value": "<integer>"
+												},
+												{
+													"key": "numeroConta",
+													"value": "<long>"
+												},
+												{
+													"key": "razaoConta",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n \"codigoRetorno\": -27057772,\n \"identificadorModalidadeConta\": \"1\",\n \"nomeCliente\": \"fugiat\",\n \"numeroConta\": -78560002,\n \"razaoConta\": 55546214,\n \"saldosDiversos\": [\n  {\n   \"descricao\": \"SUJEITO A ANÁLISE DE CRÉDITO. PARA CONTRATAÇÃO, DIRIJA-SE A SUA AGÊNCIA.\",\n   \"identificacaoBaixaAutomatica\": \"1\",\n   \"identificacaoProduto\": 951,\n   \"identificacaoSaldo\": \"1\",\n   \"saldo\": 20.56\n  },\n  {\n   \"descricao\": \"SUJEITO A ANÁLISE DE CRÉDITO. PARA CONTRATAÇÃO, DIRIJA-SE A SUA AGÊNCIA.\",\n   \"identificacaoBaixaAutomatica\": \"1\",\n   \"identificacaoProduto\": 951,\n   \"identificacaoSaldo\": \"1\",\n   \"saldo\": 20.56\n  }\n ],\n \"statusContaCorrente\": \"0\",\n \"statusContaPoupanca\": \"0\"\n}"
+								}
+							]
+						}
+					],
+					"_postman_id": "d4f469d7-ebc6-49e3-9fe0-e535137f582f",
+					"_postman_isSubFolder": true
 				}
-			},
-			"response": []
-		},
+			],
+			"_postman_id": "70a188ed-9511-42ab-9bbe-e3c3f2e412c1"
+		}
+	],
+	"variable": [
 		{
-			"name": "Conta Corrente - Extratos - Período",
-			"_postman_id": "e96f203e-2745-4ba6-9b02-207eef3d6b1f",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaCorrente/extratos/periodo?codigoPeriferico=000&agencia=3861&numeroConta=38959&razaoConta=0&dataInicial=2020-01-01&dataFinal=2020-06-16&qtdOcorrencias=3&chaveRestart=",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"bgsl-srv-saldo-extrato-entr",
-						"api",
-						"v1",
-						"contaCorrente",
-						"extratos",
-						"periodo"
-					],
-					"query": [
-						{
-							"key": "codigoPeriferico",
-							"value": "000"
-						},
-						{
-							"key": "agencia",
-							"value": "3861"
-						},
-						{
-							"key": "numeroConta",
-							"value": "38959"
-						},
-						{
-							"key": "razaoConta",
-							"value": "0"
-						},
-						{
-							"key": "dataInicial",
-							"value": "2020-01-01"
-						},
-						{
-							"key": "dataFinal",
-							"value": "2020-06-16"
-						},
-						{
-							"key": "qtdOcorrencias",
-							"value": "3"
-						},
-						{
-							"key": "chaveRestart",
-							"value": ""
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Conta Corrente - Saldos",
-			"_postman_id": "b05dc0cc-cb44-48a6-8d46-ddfedc63a8b0",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaCorrente/saldos?codigoPeriferico=000&agencia=3963&numeroConta=404&razaoConta=0",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"bgsl-srv-saldo-extrato-entr",
-						"api",
-						"v1",
-						"contaCorrente",
-						"saldos"
-					],
-					"query": [
-						{
-							"key": "codigoPeriferico",
-							"value": "000"
-						},
-						{
-							"key": "agencia",
-							"value": "3963"
-						},
-						{
-							"key": "numeroConta",
-							"value": "404"
-						},
-						{
-							"key": "razaoConta",
-							"value": "0"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Conta Corrente - Ultimos lançamentos",
-			"_postman_id": "ddfad741-d008-4f1e-9ffb-02a1e47e6710",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaCorrente/extratos/ultimosLancamentos?codigoPeriferico=000&agencia=02516&numeroConta=0349546&razaoConta=0&qtdOcorrencias=333",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"bgsl-srv-saldo-extrato-entr",
-						"api",
-						"v1",
-						"contaCorrente",
-						"extratos",
-						"ultimosLancamentos"
-					],
-					"query": [
-						{
-							"key": "codigoPeriferico",
-							"value": "000"
-						},
-						{
-							"key": "agencia",
-							"value": "02516"
-						},
-						{
-							"key": "numeroConta",
-							"value": "0349546"
-						},
-						{
-							"key": "razaoConta",
-							"value": "0"
-						},
-						{
-							"key": "qtdOcorrencias",
-							"value": "333"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Conta Corrente - Extrato consolidado",
-			"_postman_id": "92b7b2b0-7db8-46ec-9109-8b76b20d1c16",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaCorrente/extratos/consolidado?codigoPeriferico=000&agencia=02516&numeroConta=0349546&razaoConta=0&qtdOcorrencias=300",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"bgsl-srv-saldo-extrato-entr",
-						"api",
-						"v1",
-						"contaCorrente",
-						"extratos",
-						"consolidado"
-					],
-					"query": [
-						{
-							"key": "codigoPeriferico",
-							"value": "000"
-						},
-						{
-							"key": "agencia",
-							"value": "02516"
-						},
-						{
-							"key": "numeroConta",
-							"value": "0349546"
-						},
-						{
-							"key": "razaoConta",
-							"value": "0"
-						},
-						{
-							"key": "qtdOcorrencias",
-							"value": "300"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Conta Poupanca - Extratos - Lancamentos Futuros",
-			"_postman_id": "937a0cd2-bc93-4882-aa55-a101c5a3b880",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaPoupanca/extratos/lancamentosFuturos?codigoPeriferico=000&agencia=3963&numeroConta=404&razaoConta=0&qtdOcorrencias=3&chaveRestart=",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"bgsl-srv-saldo-extrato-entr",
-						"api",
-						"v1",
-						"contaPoupanca",
-						"extratos",
-						"lancamentosFuturos"
-					],
-					"query": [
-						{
-							"key": "codigoPeriferico",
-							"value": "000"
-						},
-						{
-							"key": "agencia",
-							"value": "3963"
-						},
-						{
-							"key": "numeroConta",
-							"value": "404"
-						},
-						{
-							"key": "razaoConta",
-							"value": "0"
-						},
-						{
-							"key": "qtdOcorrencias",
-							"value": "3"
-						},
-						{
-							"key": "chaveRestart",
-							"value": ""
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Conta Poupanca - Extratos - Periodo",
-			"_postman_id": "4751435c-1504-4710-89ec-59aef305840e",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaPoupanca/extratos/periodo?codigoPeriferico=000&agencia=3861&numeroConta=38959&razaoConta=0&dataInicial=2019-01-08&dataFinal=2020-05-26&qtdOcorrencias=2&chaveRestart=",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"bgsl-srv-saldo-extrato-entr",
-						"api",
-						"v1",
-						"contaPoupanca",
-						"extratos",
-						"periodo"
-					],
-					"query": [
-						{
-							"key": "codigoPeriferico",
-							"value": "000"
-						},
-						{
-							"key": "agencia",
-							"value": "3861"
-						},
-						{
-							"key": "numeroConta",
-							"value": "38959"
-						},
-						{
-							"key": "razaoConta",
-							"value": "0"
-						},
-						{
-							"key": "dataInicial",
-							"value": "2019-01-08"
-						},
-						{
-							"key": "dataFinal",
-							"value": "2020-05-26"
-						},
-						{
-							"key": "qtdOcorrencias",
-							"value": "2"
-						},
-						{
-							"key": "chaveRestart",
-							"value": ""
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Conta Poupanca - Saldos",
-			"_postman_id": "0ae8658c-1aa4-4ae5-ab17-8849d0f9e915",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaPoupanca/saldos?codigoPeriferico=000&agencia=3963&numeroConta=404&razaoConta=0",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"bgsl-srv-saldo-extrato-entr",
-						"api",
-						"v1",
-						"contaPoupanca",
-						"saldos"
-					],
-					"query": [
-						{
-							"key": "codigoPeriferico",
-							"value": "000"
-						},
-						{
-							"key": "agencia",
-							"value": "3963"
-						},
-						{
-							"key": "numeroConta",
-							"value": "404"
-						},
-						{
-							"key": "razaoConta",
-							"value": "0"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Conta Poupança - Ultimos lançamentos",
-			"_postman_id": "50698e4c-7975-422f-aa14-eef9c4faced1",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaPoupanca/extratos/ultimosLancamentos?codigoPeriferico=000&agencia=02516&numeroConta=0349546&razaoConta=0&qtdOcorrencias=10",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"bgsl-srv-saldo-extrato-entr",
-						"api",
-						"v1",
-						"contaPoupanca",
-						"extratos",
-						"ultimosLancamentos"
-					],
-					"query": [
-						{
-							"key": "codigoPeriferico",
-							"value": "000"
-						},
-						{
-							"key": "agencia",
-							"value": "02516"
-						},
-						{
-							"key": "numeroConta",
-							"value": "0349546"
-						},
-						{
-							"key": "razaoConta",
-							"value": "0"
-						},
-						{
-							"key": "qtdOcorrencias",
-							"value": "10"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Conta Poupança - Extrato consolidado",
-			"_postman_id": "de34af9b-057f-438c-b4e6-a06b309e60af",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{host}}/bgsl-srv-saldo-extrato-entr/api/v1/contaPoupanca/extratos/consolidado?codigoPeriferico=000&agencia=02516&numeroConta=0349546&razaoConta=0&qtdOcorrencias=10",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"bgsl-srv-saldo-extrato-entr",
-						"api",
-						"v1",
-						"contaPoupanca",
-						"extratos",
-						"consolidado"
-					],
-					"query": [
-						{
-							"key": "codigoPeriferico",
-							"value": "000"
-						},
-						{
-							"key": "agencia",
-							"value": "02516"
-						},
-						{
-							"key": "numeroConta",
-							"value": "0349546"
-						},
-						{
-							"key": "razaoConta",
-							"value": "0"
-						},
-						{
-							"key": "qtdOcorrencias",
-							"value": "10"
-						}
-					]
-				}
-			},
-			"response": []
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "//api.net.bradesco.com.br/api-front-entr-1.0.11",
+			"type": "string"
 		}
 	]
 }
